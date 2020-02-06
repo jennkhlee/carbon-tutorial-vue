@@ -1,8 +1,24 @@
 <template>
   <div id="app">
-    Hello Carbon! Well, not quite yet. This is the starting point for the Carbon
-    tutorial.
-  </div>
+    <Header />
+      <cv-content id="#main-content">
+      <router-view />
+    </cv-content>
+    </div>
 </template>
 
-<style lang="scss"></style>
+<script>
+import Header from "./components/Header/Header.vue";
+
+export default {
+  name: "App",
+  components: {
+    Header
+  }
+};
+</script>
+
+<style lang="scss">
+@import './styles/carbon';
+</style>
+
