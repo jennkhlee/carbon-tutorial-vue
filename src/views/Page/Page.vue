@@ -1,22 +1,19 @@
 <template>
   <div>
-    PAGE
     <Test />
-
   </div>
 </template>
 
-
-
 <script>
-// import TestComponent from "../../components/Component/TestComponent.vue";
-// import Test from '../../components/test/Test.vue';
+import '@carbon/charts/styles.css';
+import chartsVue from '@carbon/charts-vue';
+
+Vue.use(chartsVue);
 
 export default {
   name: "Test",
     data() {
       return {
-
         stackedBarData: {
           labels: ['Quantity', 'Leads', 'Sold', 'Restocking', 'Misc'],
             datasets: [
@@ -34,25 +31,23 @@ export default {
                 },
             ],
             },
-
         stackedBarOptions: {
-                title: 'Stacked bar (discrete)',
+            title: 'Stacked bar (discrete)',
                 axes: {
-                    left: {
-                    primary: true,
-                    stacked: true,
-                    },
-                    bottom: {
-                    scaleType: 'labels',
-                    secondary: true,
-                    },
+                  left: {
+                  primary: true,
+                  stacked: true,
+                  },
+                  bottom: {
+                  scaleType: 'labels',
+                  secondary: true,
+                  },
                 },
-                height: '400px',},
+            height: '400px',},
         };
     },
 
     template:
       '<ccv-stacked-bar-chart :data="stackedBarData" :options="stackedBarOptions"></ccv-bar-chart>',
 }
-
 </script>
