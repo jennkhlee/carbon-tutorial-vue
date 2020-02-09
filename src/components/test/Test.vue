@@ -2,14 +2,12 @@
     <Test />
 </template>
 
-
 <script>
 
   export default {
     name: "Test",
     data() {
       return {
-
         stackedBarData: {
           labels: ['Quantity', 'Leads', 'Sold', 'Restocking', 'Misc'],
             datasets: [
